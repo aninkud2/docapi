@@ -138,7 +138,7 @@ exports.forgotpassword = async (req, res) => {
         })
     }}
 
-    exports.resetpassword = async (req, res) => {
+    exports.Resetpassword = async (req, res) => {
         try {
             const {password} = req.body
             const id = req.params.id

@@ -28,9 +28,9 @@ Router.route('/signUp').post(userSignUp)
 Router.route('/logIn').post(userlogIn)
 Router.route('/verify/:id').post(verifyUser)
 Router.route('/forgotpassword').post(forgotpassword)
-Router.route('/changepassword/:id/:token').post(resetPassword)
+Router.route('/changepassword/:id/:token').post(Resetpassword)
 Router.route('/logOut').post(logOut)
 
   
 
-module.exports = Router     
+module.exports = Router    

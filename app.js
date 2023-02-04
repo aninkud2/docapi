@@ -2,7 +2,7 @@ const express = require('express')
 const dotenv = require('dotenv')
 dotenv.config({path: './config/config.env'})
 const cors = require('cors')
-const Router = require('./docRouter/docRouter')
+const Router = require('./docRouter/router')
 const fileuploader = require('express-fileupload'); 
 
 
@@ -15,13 +15,12 @@ app.use(express.json())
 
 
 
-app.use(fileuploader({
+app.use(fileuploader({ 
     useTempFiles: true
 }))
 
 app.use('/api', Router)
-
-
+ 
 app.use('/',(req,res)=>{
     res.status(200).send("My Api is working")
 })
