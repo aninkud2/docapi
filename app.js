@@ -9,9 +9,9 @@ const fileuploader = require('express-fileupload');
 
 const app = express()
 
-app.use(cors)
+ app.use(cors())
 app.use(express.json()) 
-
+ 
 
 
 
@@ -19,11 +19,11 @@ app.use(fileuploader({
     useTempFiles: true
 }))
 
-app.use('/api', Router)
- 
-app.use('/',(req,res)=>{
-    res.status(200).send("My Api is working")
+app.get('/', (req, res)=>{
+    res.status(200).send("My Api is connected successfully")
 })
 
+
+app.use('/api', Router)
 
 module.exports = app
